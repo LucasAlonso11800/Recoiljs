@@ -1,17 +1,19 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
+import './App.css';
+
 import AvailableItems from './AvailableItems';
 import Cart from './Cart';
 import Shipping from './Shipping';
-import './App.css';
+import Totals from './Totals';
 
-const inventory = {
+export const inventory = {
     a: { name: 'Yerba', price: 10 },
     b: { name: 'Coffee', price: 15 },
     c: { name: 'Tea', price: 8 }
 };
 
-const destinations = {
+export const destinations = {
     US: 25,
     CA: 35,
     CO: 45
@@ -23,6 +25,7 @@ function App() {
             <AvailableItems inventory={inventory} />
             <Cart inventory={inventory} />
             <Shipping destinations={destinations} />
+            <Totals />
         </RecoilRoot>
     );
 };
