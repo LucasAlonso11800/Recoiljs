@@ -20,7 +20,7 @@ function App() {
     return (
         <RecoilRoot>
             <AvailableItems inventory={inventory} />
-            <Cart />
+            <Cart inventory={inventory} />
         </RecoilRoot>
     );
 };
