@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue
-} from 'recoil';
+import { RecoilRoot } from 'recoil';
+import AvailableItems from './AvailableItems';
+import Cart from './Cart';
 import './App.css';
 
 const inventory = {
@@ -23,9 +19,10 @@ const destinations = {
 function App() {
     return (
         <RecoilRoot>
-            
+            <AvailableItems inventory={inventory} />
+            <Cart />
         </RecoilRoot>
     );
-}
+};
 
 export default App;
