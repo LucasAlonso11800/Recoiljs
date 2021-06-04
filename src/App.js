@@ -2,6 +2,7 @@ import React from 'react';
 import { RecoilRoot } from 'recoil';
 import AvailableItems from './AvailableItems';
 import Cart from './Cart';
+import Shipping from './Shipping';
 import './App.css';
 
 const inventory = {
@@ -21,6 +22,7 @@ function App() {
         <RecoilRoot>
             <AvailableItems inventory={inventory} />
             <Cart inventory={inventory} />
+            <Shipping destinations={destinations} />
         </RecoilRoot>
     );
 };
