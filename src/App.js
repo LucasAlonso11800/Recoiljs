@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import {
+    RecoilRoot,
+    atom,
+    selector,
+    useRecoilState,
+    useRecoilValue
+} from 'recoil';
 import './App.css';
 
+const inventory = {
+    a: { name: 'Yerba', price: 10 },
+    b: { name: 'Coffee', price: 15 },
+    c: { name: 'Tea', price: 8 }
+};
+
+const destinations = {
+    US: 25,
+    CA: 35,
+    CO: 45
+};
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <RecoilRoot>
+            
+        </RecoilRoot>
+    );
 }
 
 export default App;
